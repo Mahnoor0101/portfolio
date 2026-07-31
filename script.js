@@ -321,39 +321,4 @@ document.addEventListener('DOMContentLoaded', () => {
         startAutoplay();
     }
 
-    /* ==========================================
-       CONTACT FORM VALIDATION & SUBMISSION
-       ========================================== */
-    const contactForm = document.getElementById('contact-form');
-    const formFeedback = document.getElementById('form-feedback');
-
-    if (contactForm && formFeedback) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const submitBtn = contactForm.querySelector('.btn-submit');
-            const originalBtnHTML = submitBtn.innerHTML;
-            
-            // Set loading state
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
-            formFeedback.style.display = 'none';
-            formFeedback.className = 'form-feedback';
-            
-            // Simulate form submission
-            setTimeout(() => {
-                const name = document.getElementById('form-name').value;
-                
-                // Mock success response
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalBtnHTML;
-                
-                formFeedback.textContent = `Thank you, ${name}! Your message has been sent successfully. I will get back to you shortly.`;
-                formFeedback.classList.add('success');
-                
-                // Clear fields
-                contactForm.reset();
-            }, 1500);
-        });
-    }
-});
+ 
