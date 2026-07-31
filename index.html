@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahnoor | Graphic Designer & Brand Identity Specialist</title>
+    <meta name="description"
+        content="Portfolio of Mahnoor, a premium Graphic Designer specializing in brand identity, packaging, digital art, and UI graphics. View selected projects and get in touch.">
+    <!-- Preconnect for faster external resource loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome Icons - LOCAL (always works, no internet needed) -->
+    <link rel="stylesheet" href="fa.min.css">
+    <!-- CDN Backup (loads if local fails) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css"
+        media="print" onload="this.media='all'; this.onload=null;">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Inline icon fallback: if FA fails, icons show as colored symbols -->
+    <style>
+        /* Emergency fallback: visible placeholder while FA loads */
+        .fa-solid::before,
+        .fa-regular::before,
+        .fa-brands::before {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Sticky Navigation -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#home" class="logo" id="logo-brand">
+                MAH<span class="text-accent">NOOR</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-outline nav-btn">Let's Talk</a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero-section section-padding" id="home">
+            <div class="hero-container">
+                <div class="hero-content scroll-reveal fade-up">
+                    <h1 class="hero-title">
+                        Design that speaks,<br>
+                        Brands that <span class="text-accent">inspire.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Hi, I'm Mahnoor, a creative Graphic Designer specialized in brand identity, packaging, and
+                        digital media. I craft high-end visual solutions that elevate businesses and captivate
+                        audiences.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#portfolio" class="btn btn-primary">Explore My Work</a>
+                        <a href="#contact" class="btn btn-text">Get in Touch <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Angled Showcase Strip -->
+                <div class="showcase-strip-wrapper scroll-reveal fade-up">
+                    <div class="showcase-strip">
+                        <div class="showcase-card card-rotate-1" data-project-index="0">
+                            <img src="assets/0042_JONATHAN_0506-02.jpg" alt="Brand Identity Design Mockup">
+                            <div class="showcase-badge">Identity</div>
+                        </div>
+                        <div class="showcase-card card-rotate-2" data-project-index="1">
+                            <img src="assets/poster.jpg" alt="Premium Packaging Design">
+                            <div class="showcase-badge">Poster</div>
+                        </div>
+                        <div class="showcase-card card-rotate-3" data-project-index="2">
+                            <img src="assets/lion-logo.jpg" alt="Minimalist Art Poster">
+                            <div class="showcase-badge">Logo</div>
+                        </div>
+                        <div class="showcase-card card-rotate-4" data-project-index="3">
+                            <img src="assets\gridiron.jpg" alt="Social Media Graphic">
+                            <div class="showcase-badge">Digital</div>
+                        </div>
+                        <div class="showcase-card card-rotate-5" data-project-index="4">
+                            <img src="assets/jara-jamz.jpg" alt="App Interface Layout">
+                            <div class="showcase-badge">Logo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section section-padding" id="about">
+            <div class="section-container">
+                <div class="about-grid">
+                    <div class="about-image-wrapper scroll-reveal fade-right">
+                        <div class="about-img-frame">
+                            <img src="assets\profile.jpeg" alt="Mahnoor - Graphic Designer Profile" class="about-img">
+                            <div class="experience-badge">
+                                <span class="exp-years">2+</span>
+                                <span class="exp-text">Years of<br>Creative Exp.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-info scroll-reveal fade-left">
+                        <span class="section-tag">About Me</span>
+                        <h2 class="section-title">Visual Alchemist transforming ideas into brand value</h2>
+                        <p class="about-bio">
+                            I am a designer driven by conceptual clarity and aesthetic refinement. My philosophy is that
+                            great design is not just how it looks, but how effectively it communicates and solves a
+                            brand's core challenges.
+                        </p>
+                        <p class="about-bio">
+                            Whether creating comprehensive brand guidelines, tactile packaging designs, or modern user
+                            interfaces, I pay attention to typography, proportion, and visual hierarchy to ensure that
+                            every pixel and vector serves a larger story.
+                        </p>
+
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">120+</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Happy Clients</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Design Categories</span>
+                            </div>
+                        </div>
+
+                        <div class="about-actions">
+                            <a href="#contact" class="btn btn-primary">Hire Me Today</a>
+                            <a href="assets\resume.pdf" class="btn btn-outline" download id="download-resume">Download
+                                Resume <i class="fa-solid fa-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services / Skills Section -->
+        <section class="services-section section-padding" id="services">
+            <div class="section-container">
+                <div class="section-header scroll-reveal fade-up">
+                    <span class="section-tag">What I Offer</span>
+                    <h2 class="section-title">Design services focused on growth and aesthetics</h2>
+                    <p class="section-subtitle">Combining artistic vision with user-centric strategies to deliver
+                        designs that convert attention into engagement.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card scroll-reveal fade-up">
+                        <div class="service-icon-wrapper">
+                            <i class="fa-solid fa-bezier-curve service-icon"></i>
+                        </div>
+                        <h3 class="service-title">Brand Identity & Strategy</h3>
+                        <p class="service-desc">
+                            Crafting comprehensive visual systems, custom logos, stationery assets, color strategies,
+                            and detailed typography guidelines to ensure consistency.
+                        </p>
+                        <ul class="service-list">
+                            <li><i class="fa-solid fa-check"></i> Logo Suite Design</li>
+                            <li><i class="fa-solid fa-check"></i> Brand Guidelines & Styleguides</li>
+                            <li><i class="fa-solid fa-check"></i> Collateral & Stationery</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card scroll-reveal fade-up" style="transition-delay: 0.12s;">
+                        <div class="service-icon-wrapper">
+                            <i class="fa-solid fa-box-open service-icon"></i>
+                        </div>
+                        <h3 class="service-title">Packaging & Print Design</h3>
+                        <p class="service-desc">
+                            Creating stunning structural and graphic solutions for physical goods, promotional posters,
+                            brochures, layouts, and print-ready publishing materials.
+                        </p>
+                        <ul class="service-list">
+                            <li><i class="fa-solid fa-check"></i> Custom Product Boxes</li>
+                            <li><i class="fa-solid fa-check"></i> Labels & Merchandising</li>
+                            <li><i class="fa-solid fa-check"></i> Editorial Layouts & Posters</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card scroll-reveal fade-up" style="transition-delay: 0.24s;">
+                        <div class="service-icon-wrapper">
+                            <i class="fa-solid fa-share-nodes service-icon"></i>
+                        </div>
+                        <h3 class="service-title">Digital Art & Social Media</h3>
+                        <p class="service-desc">
+                            Developing dynamic social media templates, ad assets, marketing banners, newsletters, and
+                            digital campaign design elements built for online reach.
+                        </p>
+                        <ul class="service-list">
+                            <li><i class="fa-solid fa-check"></i> Instagram Grid & Stories Systems</li>
+                            <li><i class="fa-solid fa-check"></i> Interactive Ad Design</li>
+                            <li><i class="fa-solid fa-check"></i> E-mail Campaign Graphic Assets</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card scroll-reveal fade-up" style="transition-delay: 0.36s;">
+                        <div class="service-icon-wrapper">
+                            <i class="fa-solid fa-mobile-screen service-icon"></i>
+                        </div>
+                        <h3 class="service-title">UI & Digital Interface Design</h3>
+                        <p class="service-desc">
+                            Designing sleek UI grids, graphics, interactive visual boards, and graphic assets for
+                            desktop dashboards and custom mobile application workflows.
+                        </p>
+                        <ul class="service-list">
+                            <li><i class="fa-solid fa-check"></i> Wireframing & Prototyping Layouts</li>
+                            <li><i class="fa-solid fa-check"></i> Mobile Interface Assets</li>
+                            <li><i class="fa-solid fa-check"></i> Custom Icons & Digital Graphics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio-section section-padding" id="portfolio">
+            <div class="section-container">
+                <div class="section-header scroll-reveal fade-up">
+                    <span class="section-tag">My Work</span>
+                    <h2 class="section-title">Selected design work making an impact</h2>
+                    <p class="section-subtitle">Explore a handpicked showcase of graphic design projects spanning across
+                        visual identity, packaging, and digital experiences.</p>
+                </div>
+
+                <!-- Gallery Category Filters -->
+                <div class="portfolio-filters scroll-reveal fade-up">
+                    <button class="filter-btn active-filter" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="identity">Branding</button>
+                    <button class="filter-btn" data-filter="logo">logo</button>
+                    <button class="filter-btn" data-filter="digital">Digital & UI</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="portfolio-grid scroll-reveal fade-in">
+                    <!-- Item 1 -->
+                    <div class="portfolio-item" data-category="logo" data-index="0">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/lion-logo.jpg" alt="Aura & Co. Visual Identity Mockup">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">logo</span>
+                                <h4 class="item-title">London Monarchs</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="portfolio-item" data-category="logo" data-index="1">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/buffalo_pedal_tours.jpg" alt="Pure Elixir Organic Cosmetics Packaging">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">logo</span>
+                                <h4 class="item-title">Buffalo Pedal Tours</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="portfolio-item" data-category="logo" data-index="2">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/pandaa.jpg" alt="Bauhaus Modernism Exhibition Poster">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">logo</span>
+                                <h4 class="item-title">Boss Networks</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="portfolio-item" data-category="logo" data-index="3">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/4D41_KEN716585_0606.jpg" alt="Pulse Music Campaign Social Assets">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">logo</span>
+                                <h4 class="item-title">Saloon Boat logo</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="portfolio-item" data-category="identity" data-index="4">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/0042_JONATHAN_0506-02.jpg" alt="Apex Fintech Dashboard App Interface">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">Branding</span>
+                                <h4 class="item-title">FellowShip 5k</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 6 -->
+                    <div class="portfolio-item" data-category="identity" data-index="5">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/0042_JONATHAN_0506-04.jpg" alt="Apex Fintech Dashboard App Interface">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">Branding</span>
+                                <h4 class="item-title">Fun Run</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 7 -->
+                    <div class="portfolio-item" data-category="identity" data-index="6">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/chops.jpg" alt="Apex Fintech Dashboard App Interface">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">Branding</span>
+                                <h4 class="item-title">OFF It's Chops</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 8 -->
+                    <div class="portfolio-item" data-category="identity" data-index="7">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/FP&A.jpg" alt="Apex Fintech Dashboard App Interface">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">Branding</span>
+                                <h4 class="item-title">FP&A Consulting Identity</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 9 -->
+                    <div class="portfolio-item" data-category="digital" data-index="8">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/gridiron.jpg" alt="Apex Fintech Dashboard App Interface">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">Branding</span>
+                                <h4 class="item-title">Sports Performance graphics</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 10 -->
+                    <div class="portfolio-item" data-category="logo" data-index="9">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/grind.jpg.jpg" alt="Apex Fintech Dashboard App Interface">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">Logo</span>
+                                <h4 class="item-title">TGK Athletic logo</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 11 -->
+                    <div class="portfolio-item" data-category="logo" data-index="10">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/jara-jamz.jpg" alt="Apex Fintech Dashboard App Interface">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">Logo</span>
+                                <h4 class="item-title">JARA JAMZ logo</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 12 -->
+                    <div class="portfolio-item" data-category="logo" data-index="11">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/logoO.jpg" alt="Apex Fintech Dashboard App Interface">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">Logo</span>
+                                <h4 class="item-title">Off It's Chop logo</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 13 -->
+                    <div class="portfolio-item" data-category="identity" data-index="12">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/PASQUA_lake_cornhole.jpg.jpg" alt="Apex Fintech Dashboard App Interface">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">Branding</span>
+                                <h4 class="item-title">Pasqua Lake Cornhole Championship</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 14 -->
+                    <div class="portfolio-item" data-category="digital" data-index="13">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/player recap.jpg" alt="Apex Fintech Dashboard App Interface">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">Branding</span>
+                                <h4 class="item-title">NBA 2K Player Recap UI</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 15 -->
+                    <div class="portfolio-item" data-category="digital" data-index="14">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/poster.jpg" alt="Apex Fintech Dashboard App Interface">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">Poster</span>
+                                <h4 class="item-title">Rafiq Motor Promotion</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 16 -->
+                    <div class="portfolio-item" data-category="logo" data-index="15">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets\seaweed-apparel-&-design.jpg.jpg"
+                                alt="Apex Fintech Dashboard App Interface">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">Logo</span>
+                                <h4 class="item-title">Seaweed Apparel & Design</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 17 -->
+                    <div class="portfolio-item" data-category="logo" data-index="16">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets\tasting_tsucaloosa.jpg.jpg" alt="Apex Fintech Dashboard App Interface">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">Logo</span>
+                                <h4 class="item-title">Tasting Tuscaloosa</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 18 -->
+                    <div class="portfolio-item" data-category="logo" data-index="17">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/TGKknows.jpg.jpg" alt="Apex Fintech Dashboard App Interface">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">Logo</span>
+                                <h4 class="item-title">TGK Athletics Logo</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 19 -->
+                    <div class="portfolio-item" data-category="identity" data-index="18">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/WhatsApp Image 2025-10-24 at 12.54.06_581d3e98.jpg"
+                                alt="Apex Fintech Dashboard App Interface">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">Identity</span>
+                                <h4 class="item-title">Cartoon character</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 20 -->
+                    <div class="portfolio-item" data-category="logo" data-index="19">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/zelper.jpg" alt="Apex Fintech Dashboard App Interface">
+                            <div class="portfolio-overlay">
+                                <span class="item-category">Logo</span>
+                                <h4 class="item-title">Zelper Logo</h4>
+                                <span class="item-view-btn"><i class="fa-solid fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section section-padding" id="testimonials">
+            <div class="section-container">
+                <div class="section-header scroll-reveal fade-up">
+                    <span class="section-tag">Client Reviews</span>
+                    <h2 class="section-title">What people say about working with me</h2>
+                </div>
+
+                <div class="testimonials-carousel scroll-reveal fade-up">
+                    <div class="testimonial-track" id="testimonial-track">
+                        <!-- Card 1 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-quote">
+                                "Mahnoor completely understood our brand philosophy and turned it into an elegant,
+                                high-impact visual identity system. Her attention to typography and proportions was
+                                masterclass."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-details">
+                                    <h4 class="author-name">Noaman Ayub</h4>
+                                    <span class="author-role">Founder, Arise Ability</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-quote">
+                                "Mahnoor delivered a modern and professional brand identity that perfectly matched our
+                                vision. The logo, color palette, and marketing materials were thoughtfully designed, and
+                                communication throughout the project was excellent. I would gladly work together again"
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-details">
+                                    <h4 class="author-name">Javayria Javed</h4>
+                                    <span class="author-role">Marketing Manager</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-quote">
+                                "Working with Mahnoor was a great experience. Every design was clean, creative, and
+                                delivered on time. The social media posts and promotional graphics significantly
+                                improved our brand's online presence. Highly recommended for anyone looking for quality
+                                graphic design"
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-details">
+                                    <h4 class="author-name">Azka Khadim</h4>
+                                    <span class="author-role">Freelancer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Dots Navigation -->
+                    <div class="carousel-dots" id="carousel-dots">
+                        <button class="dot-btn active-dot" aria-label="Go to slide 1"></button>
+                        <button class="dot-btn" aria-label="Go to slide 2"></button>
+                        <button class="dot-btn" aria-label="Go to slide 3"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section section-padding" id="contact">
+            <div class="section-container">
+                <div class="contact-grid">
+                    <div class="contact-info scroll-reveal fade-right">
+                        <span class="section-tag">Get In Touch</span>
+                        <h2 class="section-title">Let's build something visually extraordinary</h2>
+                        <p class="contact-desc">
+                            Have an upcoming design project, brand rollout, or want to discuss a full-time
+                            collaboration? Drop a message, and let's bring your visual dreams to life.
+                        </p>
+
+                        <div class="contact-details-list">
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-regular fa-envelope"></i></div>
+                                <div class="detail-text">
+                                    <span class="detail-label">Email Me</span>
+                                    <a href="mailto:itzmahnoorshahbaz@gmail.com"
+                                        class="detail-value">itzmahnoorshahbaz@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="detail-text">
+                                    <span class="detail-label">Call / WhatsApp</span>
+                                    <a href="tel:" +92396798949 class="detail-value">+92396798949</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="detail-text">
+                                    <span class="detail-label">Based In</span>
+                                    <span class="detail-value">Multan,Pakistan</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container scroll-reveal fade-left">
+                        <form name="contact" method="POST" data-netlify="true" netlify action="/thank-you"
+                            class="contact-form">
+
+                            <!-- Required hidden input -->
+                            <input type="hidden" name="form-name" value="contact">
+
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label for="form-name" class="form-label">Full Name</label>
+                                    <input type="text" id="form-name" name="name" class="form-input"
+                                        placeholder="Your Name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="form-email" class="form-label">Email Address</label>
+                                    <input type="email" id="form-email" name="email" class="form-input"
+                                        placeholder="name@company.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-subject" class="form-label">Subject</label>
+                                <input type="text" id="form-subject" name="subject" class="form-input"
+                                    placeholder="How can I help you?" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-message" class="form-label">Message</label>
+                                <textarea id="form-message" name="message" rows="5" class="form-input"
+                                    placeholder="Describe your project, brand timeline, etc..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                Send Message <i class="fa-regular fa-paper-plane"></i>
+                            </button>
+
+                            <div class="form-feedback" id="form-feedback"></div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">MAH<span class="text-accent">NOOR</span></a>
+                    <p class="footer-tagline">Visual storytelling, brand conceptualization, and digital experiences done
+                        right.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Socials</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=61592217377563"><i
+                                    class="fa-brands fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://www.linkedin.com/in/mahnoorshahbaz016"><i
+                                    class="fa-brands fa-linkedin-in"></i> LinkedIn</a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mahnoor. All rights reserved. Designed & built with care.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal for Portfolio -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox"><i
+                class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous Project"><i
+                class="fa-solid fa-chevron-left"></i></button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next Project"><i
+                class="fa-solid fa-chevron-right"></i></button>
+
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img" id="lightbox-img">
+            <div class="lightbox-caption">
+                <span class="lightbox-category" id="lightbox-category">Category</span>
+                <h3 class="lightbox-title" id="lightbox-title">Project Title</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+    <!-- Font Awesome CDN Fallback Detection -->
+    <script>
+        (function () {
+            // Test if Font Awesome loaded by checking a known icon class renders a glyph
+            function isFALoaded() {
+                var testEl = document.createElement('i');
+                testEl.className = 'fa-solid fa-check';
+                testEl.style.position = 'absolute';
+                testEl.style.visibility = 'hidden';
+                document.body.appendChild(testEl);
+                var fontFamily = window.getComputedStyle(testEl, '::before').getPropertyValue('font-family');
+                document.body.removeChild(testEl);
+                return fontFamily && fontFamily.indexOf('Font Awesome') !== -1;
+            }
+
+            function loadFACDN(href) {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = href;
+                document.head.appendChild(link);
+            }
+
+            // Wait for page to load, then verify FA
+            window.addEventListener('load', function () {
+                if (!isFALoaded()) {
+                    console.warn('Font Awesome: primary CDN failed, trying cdnjs fallback...');
+                    loadFACDN('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+                    // Wait 1s, if still failing try unpkg
+                    setTimeout(function () {
+                        if (!isFALoaded()) {
+                            console.warn('Font Awesome: cdnjs failed, trying unpkg fallback...');
+                            loadFACDN('https://unpkg.com/@fortawesome/fontawesome-free@6.5.2/css/all.min.css');
+                        }
+                    }, 1000);
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>
