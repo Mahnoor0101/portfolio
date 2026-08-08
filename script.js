@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
+    // Initialize EmailJS
+    emailjs.init({
+        publicKey: "CwmYltUE9IemdLUlU"
+    });
+
     /* ==========================================
        MOBILE NAVIGATION TOGGLE
        ========================================== */
@@ -10,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('show-menu');
-            
+
             // Toggle hamburger icon animation
             const icon = navToggle.querySelector('i');
             if (navMenu.classList.contains('show-menu')) {
@@ -41,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
        STICKY HEADER SCROLL EFFECT
        ========================================== */
     const header = document.getElementById('header');
-    
+
     function checkHeaderScroll() {
         if (window.scrollY >= 50) {
             header.classList.add('scrolled');
@@ -57,16 +62,16 @@ document.addEventListener('DOMContentLoaded', () => {
        ACTIVE LINK ON SCROLL
        ========================================== */
     const sections = document.querySelectorAll('section[id]');
-    
+
     function highlightActiveLink() {
         const scrollY = window.pageYOffset;
-        
+
         sections.forEach(current => {
             const sectionHeight = current.offsetHeight;
             const sectionTop = current.offsetTop - 120; // offset for sticky nav
             const sectionId = current.getAttribute('id');
             const navLink = document.querySelector(`.nav-menu a[href*='${sectionId}']`);
-            
+
             if (navLink) {
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                     navLink.classList.add('active-link');
@@ -111,18 +116,18 @@ document.addEventListener('DOMContentLoaded', () => {
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             if (btn.classList.contains('active-filter')) return;
-            
+
             // Remove active class from other buttons
             filterButtons.forEach(button => button.classList.remove('active-filter'));
             btn.classList.add('active-filter');
-            
+
             const filterValue = btn.getAttribute('data-filter');
             const grid = document.querySelector('.portfolio-grid');
-            
+
             if (grid) {
                 // Step 1: Fade out the grid
                 grid.classList.add('fade-out');
-                
+
                 // Step 2: Swap visibility of items after grid fades out (300ms)
                 setTimeout(() => {
                     portfolioItems.forEach(item => {
@@ -133,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             item.style.display = 'none';
                         }
                     });
-                    
+
                     // Step 3: Fade in the grid
                     grid.classList.remove('fade-out');
                 }, 300);
@@ -151,10 +156,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxClose = document.getElementById('lightbox-close');
     const lightboxPrev = document.getElementById('lightbox-prev');
     const lightboxNext = document.getElementById('lightbox-next');
-    
+
     // Select all items that can be opened in the lightbox
     const openableItems = document.querySelectorAll('.portfolio-item, .showcase-card');
-    
+
     // We map only the portfolio items for sequential navigation
     const galleryData = Array.from(document.querySelectorAll('.portfolio-item')).map(item => {
         const img = item.querySelector('img');
@@ -172,12 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function openLightbox(index) {
         currentItemIndex = parseInt(index, 10);
         const data = galleryData[currentItemIndex];
-        
+
         if (data) {
             lightboxImg.src = data.src;
             lightboxCategory.textContent = data.category;
             lightboxTitle.textContent = data.title;
-            
+
             lightbox.classList.add('active');
             lightbox.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden'; // Disable page scrolling
@@ -195,27 +200,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function navigateLightbox(direction) {
         let newIndex = currentItemIndex + direction;
-        
+
         if (newIndex >= galleryData.length) {
             newIndex = 0; // Wrap around to first
         } else if (newIndex < 0) {
             newIndex = galleryData.length - 1; // Wrap around to last
         }
-        
+
         // Add a quick fade out/in effect
         lightboxImg.style.opacity = '0';
         lightboxImg.style.transform = 'scale(0.95)';
-        
+
         setTimeout(() => {
             currentItemIndex = newIndex;
             const data = galleryData[currentItemIndex];
-            
+
             if (data) {
                 lightboxImg.src = data.src;
                 lightboxCategory.textContent = data.category;
                 lightboxTitle.textContent = data.title;
             }
-            
+
             // Allow layout/source change to register, then transition opacity/scale back in
             setTimeout(() => {
                 lightboxImg.style.opacity = '1';
@@ -276,11 +281,11 @@ document.addEventListener('DOMContentLoaded', () => {
        ========================================== */
     const track = document.getElementById('testimonial-track');
     const dotsContainer = document.getElementById('carousel-dots');
-    
+
     if (track && dotsContainer) {
         const slides = Array.from(track.children);
         const dots = Array.from(dotsContainer.children);
-        
+
         let activeSlideIndex = 0;
         let autoplayInterval;
 
@@ -288,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
             activeSlideIndex = index;
             const amountToMove = -index * 100;
             track.style.transform = `translateX(${amountToMove}%)`;
-            
+
             // Update dots
             dots.forEach(dot => dot.classList.remove('active-dot'));
             dots[index].classList.add('active-dot');
@@ -321,5 +326,89 @@ document.addEventListener('DOMContentLoaded', () => {
         startAutoplay();
     }
 
+
+   /* ==========================================
+   EMAILJS CONTACT FORM
+   ========================================== */
+
+const contactForm = document.getElementById("contact-form");
+const formFeedback = document.getElementById("form-feedback");
+
+if (contactForm && formFeedback) {
+
+    contactForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const submitButton = contactForm.querySelector(".btn-submit");
+
+        // Show sending state
+        submitButton.disabled = true;
+        submitButton.innerHTML =
+            'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
+
+        // Make feedback visible
+        formFeedback.style.display = "block";
+        formFeedback.style.visibility = "visible";
+        formFeedback.style.opacity = "1";
+        formFeedback.style.marginTop = "15px";
+        formFeedback.style.fontWeight = "600";
+
+        formFeedback.textContent = "Sending message...";
+        formFeedback.style.color = "#666";
+
+        console.log("Contact form submitted.");
+        console.log("Sending through EmailJS...");
+
+        emailjs.sendForm(
+            "service_sqj8eqd",
+            "template_b9kncg9",
+            contactForm
+        )
+        .then(function (response) {
+
+            console.log("EMAILJS SUCCESS:", response);
+
+            // SUCCESS MESSAGE
+            formFeedback.style.display = "block";
+            formFeedback.style.visibility = "visible";
+            formFeedback.style.opacity = "1";
+            formFeedback.style.color = "#28a745";
+
+            formFeedback.textContent =
+                "✓ Message sent successfully! I'll get back to you soon.";
+
+            // Clear form
+            contactForm.reset();
+
+            // Restore button
+            submitButton.disabled = false;
+            submitButton.innerHTML =
+                'Send Message <i class="fa-regular fa-paper-plane"></i>';
+
+        })
+        .catch(function (error) {
+
+            console.error("EMAILJS ERROR:", error);
+
+            // ERROR MESSAGE
+            formFeedback.style.display = "block";
+            formFeedback.style.visibility = "visible";
+            formFeedback.style.opacity = "1";
+            formFeedback.style.color = "#dc3545";
+
+            formFeedback.textContent =
+                "✕ Message could not be sent. Please try again.";
+
+            // Restore button
+            submitButton.disabled = false;
+            submitButton.innerHTML =
+                'Send Message <i class="fa-regular fa-paper-plane"></i>';
+
+        });
+
+    });
+
+}
 
 });
